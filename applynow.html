@@ -2005,8 +2005,8 @@
   //     }
   // }
   function enableSubmit() {
-    let inputs = document.getElementsByClassName('form-control');
-    let btn = document.getElementsByClassName('btn');
+    let inputs = document.querySelectorAll('.form-control');
+    let btn = document.querySelectorAll('.continue');
     let isValid = true;
 
     for (var i = 0; i < inputs.length; i++) {

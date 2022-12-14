@@ -10,6 +10,7 @@
 <!-- Favicon and Touch Icons  -->
 <link rel="shortcut icon" href="../home/icon/favicon.png">
 <link rel="apple-touch-icon-precomposed" href="../home/icon/apple-touch-icon-158-precomposed.png">
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -19,6 +20,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
     crossorigin="anonymous"></script>
+
+
+
 
 <body class="page header-fixed no-sidebar site-layout-full-width has-topbar menu-has-search menu-has-cart">
 
@@ -206,7 +210,7 @@
                                     <input type="hidden" name="next" value="{{request.GET.next}}" />
 
                                     <button class="btn btn-primary" style="background-color: #0099CC; width: 130px;"
-                                        type="submit">Login</button>
+                                     id="popup_btn"   type="submit">Login</button>
                                     <p><span><a href="./password_reset_form.html">Forgot Password
                                                 ?&nbsp;&nbsp;&nbsp;&nbsp;</a></span><span> Not a member?
                                             &nbsp;&nbsp;<b><a href="./Register.html">Register Here</a></b> </span></p>
@@ -392,7 +396,11 @@
                         // alert(data);
                         localStorage.setItem("authToken", data.authtoken);
                         location.reload('./index.html');
-
+                        // document.getElementById("popup_btn").onclick = function(){
+swal("Are you sure you want to do this?", {
+  buttons: ["Existing User", "New User"],
+});
+// }
                     }
                 });
             }
@@ -419,7 +427,7 @@
 <!-- Revolution Slider -->
 <script src="../home/rev-slider/js/jquery.themepunch.tools.min.js"></script>
 <script src="../home/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
-<script src="../home/js/rev-slider.js' %}"></script>
+<script src="../home/js/rev-slider.js"></script>
 <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
 <script src="../home/rev-slider/js/extensions/revolution.extension.actions.min.js"></script>
 <script src="../home/rev-slider/js/extensions/revolution.extension.carousel.min.js"></script>
@@ -430,3 +438,4 @@
 <script src="../home/rev-slider/js/extensions/revolution.extension.parallax.min.js"></script>
 <script src="../home/rev-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
 <script src="../home/rev-slider/js/extensions/revolution.extension.video.min.js"></script>
+
