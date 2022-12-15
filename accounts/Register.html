@@ -399,14 +399,14 @@
             }
              else {
                 $.ajax({
-                    url: "http://147.182.217.223/api/user/register",
+                    url: "http://localhost:3000/api/user/register",
                     type: "POST",
                     dataType: "json",
                     data: { "firstName":firstName , "lastName":lastName, "email": email, "password": password,"cnf_password": cnf_password},
                     success: function (data) {
                         // console.warn(data);
                         // alert(data);
-                        // localStorage.setItem("authToken", data.authtoken);
+                        localStorage.setItem("authToken", data.authtoken);
                         location.href='./login.html';
 
                     }

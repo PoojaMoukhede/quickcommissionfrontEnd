@@ -383,7 +383,8 @@
                 $('#password').css("border", "2px solid red");
             } else {
                 $.ajax({
-                    url: "http://147.182.217.223/api/user/login",
+                    // url: "http://147.182.217.223/api/user/login",
+                    url: "http://localhost:3000/api/user/login",
                     type: "POST",
                     dataType: "json",
                     data: { "email": email, "password": password},
@@ -398,6 +399,9 @@
             }
         }));
     });
+
+
+    
 </script>
 <script src="../home/js/jquery.min.js"></script>
 <script src="../home/js/plugins.js"></script>

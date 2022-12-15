@@ -311,9 +311,9 @@
                                         href="{%url 'home:contactUs'%}">WELCOME, {{user.username}}</a></li> -->
 
                   <li class="nav-item" id="logout-btn">
-                    <div  style="padding-top: 40px;">
+                    <form method="POST" action="./index.html" style="padding-top: 40px;">
                       <button class="nav-link" type="submit" style="margin-top:0px">Logout</button>
-                    </div>
+                    </form>
                   </li>
 
 
@@ -359,7 +359,7 @@
                           Requested:</b></label>
                     </div>
                     <div class="col-md-3" style="padding-left:4px;">
-                      <input type="text" id="totalAmount" onchange="CheckNumeric(event);" class="form-control" name="amount"
+                      <input type="text" id="totalAmount" class="form-control" name="amount"
                         id="amount" style="padding-bottom: 0; font-size: 16px; padding-left: 4px;
                   color: black;" required>
                       <p id="errorMsg">Value must be in between $4000 to $15000 </p>
@@ -507,7 +507,7 @@
             </div>
             <div class="container">
               <div class="text-center mt-3">
-                <button class="btn mt-4 btn-primary continue" id="ContactButton20"
+                <button class="btn mt-4 btn-primary continue" id="ContactButton"
                   style="background-color:#23a1d3;" >CONTINUE</button>
               </div>
 
@@ -523,7 +523,7 @@
             style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">SALE INFORMATION</h5>
         </div>
         <div class="container cnt col-8 p-4 brd">
-          <div class="g-3 justify-content-center" >
+          <form class="g-3 justify-content-center" method="POST" action="#">
             <div class="container">
 
               <div class="row">
@@ -539,8 +539,8 @@
                         style="padding-bottom: 0; font-size: 17px; color: black; padding-left: 5px;"
                         name="BrokerRecordOfCompany">
                         <option value="" selected></option>
-                        <option value=true >Yes</option>
-                        <option value=false >No</option>
+                        <option>Yes</option>
+                        <option>No</option>
                       </select>
                     </div>
                     <div class="col-md-3"></div>
@@ -564,8 +564,8 @@
                         style="height: 50px; padding-bottom: 0;font-size: 17px; color: black; padding-left: 5px;"
                         name="OpenAdvanceswihOther">
                         <option value="" selected></option>
-                        <option value=true>Yes</option>
-                        <option value=false>No</option>
+                        <option>Yes</option>
+                        <option>No</option>
                       </select>
                     </div>
                     <div class="col-md-3"></div>
@@ -622,14 +622,14 @@
                         style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;" required>
                         <option value="" selected> Choose</option>
 
-                        <option value="Arizona">Arizona</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="NV">Nevada</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
                       </select>
                     </div>
                   </div>
@@ -716,11 +716,11 @@
                           This A Short Sale?:</b></label>
                     </div>
                     <div class="col-md-3" style="padding-left: 4px;">
-                      <select id="isShortSale" name="OpenAdvanceswihOther"
+                      <select id="BrokerRecordOfCompany4" name="OpenAdvanceswihOther"
                         style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;">
                         <option value="" selected></option>
-                        <option value=true>Yes</option>
-                        <option value=false>No</option>
+                        <option>Yes</option>
+                        <option>No</option>
                       </select>
                     </div>
                     <div class="col-md-3"></div>
@@ -745,7 +745,7 @@
                     </div>
                     <div class="col-md-3" style="padding-left: 4px;">
                       <span class="currency-code" style="padding: 6px 0 0 0 ; font-size: 16px; color: black;">$</span>
-                      <input type="number" class="form-control" id="Property_Final_Price_Net"
+                      <input type="text" class="form-control" id="Property_Final_Price_Net"
                         style="padding-left: 13px; font-size: 16px; padding-bottom: 0; color: black; padding-left: 23px;"
                         name="Property_Final_Price" required>
                     </div>
@@ -762,11 +762,11 @@
                           Agent?:</b></label>
                     </div>
                     <div class="col-md-3" style="padding-left: 4px;">
-                      <select id="isSellingOrListing" name="OpenAdvanceswihOther"
+                      <select id="BrokerRecordOfCompany5" name="OpenAdvanceswihOther"
                         style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 4px;">
-                        <option value="" selected ></option>
-                        <option value="islisting">Listing Agent</option>
-                        <option value="isSelling">Selling Agent</option>
+                        <option value="" selected></option>
+                        <option>Listing Agent</option>
+                        <option>Selling Agent</option>
                         <option>Both</option>
                       </select>
                     </div>
@@ -784,7 +784,7 @@
                           12 Months?:</b></label>
                     </div>
                     <div class="col-md-3" style="padding-left: 4px;">
-                      <input type="number" class="form-control" id="Transaction_completein_12months"
+                      <input type="text" class="form-control" id="Transaction_completein_12months"
                         style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 4px;"
                         name="Transaction_completein_12months" required>
                     </div>
@@ -803,7 +803,7 @@
                           Have?:</b></label>
                     </div>
                     <div class="col-md-3" style="padding-left: 4px;">
-                      <input type="number" class="form-control" id="Pedning_Transaction" name="Pedning_Transaction"
+                      <input type="text" class="form-control" id="Pedning_Transaction" name="Pedning_Transaction"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;" required>
                     </div>
                     <div class="col-md-3"></div>
@@ -821,7 +821,7 @@
                           Have?:</b></label>
                     </div>
                     <div class="col-md-3" style="padding-left: 4px;">
-                      <input type="number" class="form-control" id="Non_pending_Transaction"
+                      <input type="text" class="form-control" id="Non_pending_Transaction"
                         name="Non_pending_Transaction"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;" required>
                     </div>
@@ -907,16 +907,16 @@
                       <select class="form-select" id="ClosingCompany_State"
                         style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 4px;"
                         name="ClosingCompany_State" required>
-                        <option value="notSelected" selected> Choose</option>
+                        <option value="" selected> Choose</option>
 
-                        <option value="Arizona">Arizona</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="NV">Nevada</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
                       </select>
                     </div>
                   </div>
@@ -928,7 +928,7 @@
                         style="font-size: 16px; text-align: right;"><b>Zip Code:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="number" class="form-control" onchange="CheckNumeric(event);" id="ClosingCompany_Zip"
+                      <input type="text" class="form-control" onchange="CheckNumeric(event);" id="ClosingCompany_Zip"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;"
                         name="ClosingCompany_Zip" placeholder="Zip Code" required>
                     </div>
@@ -957,7 +957,7 @@
                         style="font-size: 16px; text-align: right;"><b>Phone:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="number" class="form-control" id="ClosingCompany_Cell_Phone"
+                      <input type="text" class="form-control" id="ClosingCompany_Cell_Phone"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 4px;"
                         name="ClosingCompany_Cell_Phone" required>
                     </div>
@@ -999,7 +999,7 @@
             style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">BROKER INFORMATION</h5>
         </div>
         <div class="container cnt col-8 p-4 brd">
-          <div class="g-3 justify-content-center">
+          <form class="g-3 justify-content-center" method="POST" action="#">
 
             <div class="container">
               <div class="row">
@@ -1039,8 +1039,7 @@
                         style="font-size: 16px; text-align: right;"><b>City:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="text" onchange="return (event.charCode > 64 && 
-              event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" class="form-control"
+                      <input type="text"  class="form-control"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" id="Broker_City"
                         name="Broker_City" placeholder="City" required>
                     </div>
@@ -1059,16 +1058,16 @@
                       <select class="form-select" id="Broker_State"
                         style="padding-bottom: 0; color: black; padding-left: 5px; font-size: 16px;" name="Broker_State"
                         required>
-                        <option value="notSelected" selected> Choose</option>
+                        <option value="" selected> Choose</option>
 
-                        <option value="Arizona">Arizona</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="NV">Nevada</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
                       </select>
                     </div>
                   </div>
@@ -1080,7 +1079,7 @@
                           Code:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="number" class="form-control" id="Broker_Zip" name="Broker_Zip" placeholder="Zip Code"
+                      <input type="text" class="form-control" id="Broker_Zip" name="Broker_Zip" placeholder="Zip Code"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" required>
                     </div>
                   </div>
@@ -1094,7 +1093,7 @@
                         style="font-size: 16px; text-align: right;"><b>Phone:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="number" class="form-control" id="Company_Cell_Phone" name="Company_Cell_Phone"
+                      <input type="text" class="form-control" id="Company_Cell_Phone" name="Company_Cell_Phone"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         placeholder="Phone number" required>
                     </div>
@@ -1103,11 +1102,11 @@
                 <div class="col-md-6 demoSize">
                   <div class="row g-3 align-items-center">
                     <div class="col-md-6 colSix">
-                      <label for="Broker_Company_Email" class="col-form-label"
+                      <label for="Broker_Email" class="col-form-label"
                         style="font-size: 16px; text-align: right;"><b>Email:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="email" class="form-control" id="Broker_Company_Email" name="Broker_Company_Email" placeholder="Email"
+                      <input type="email" class="form-control" id="Broker_Email" name="Broker_Email" placeholder="Email"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;" required>
                     </div>
                   </div>
@@ -1135,8 +1134,7 @@
                         style="font-size: 16px; text-align: right;"><b>Broker Last Name:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="text" onchange="return (event.charCode > 64 && 
-                            event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" class="form-control"
+                      <input type="text"  class="form-control"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         id="Broker_Last_Name" name="Broker_Last_Name" placeholder="Last name" required>
                     </div>
@@ -1147,11 +1145,11 @@
                 <div class="col-md-6 demoSize">
                   <div class="row g-3 align-items-center">
                     <div class="col-md-6 colSix">
-                      <label for="Broker_Cell_Phone" class="col-form-label"
+                      <label for="Company_Cell_Phone" class="col-form-label"
                         style="font-size: 16px; text-align: right;"><b>Broker Cell Phone:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="number" class="form-control" id="Broker_Cell_Phone" name="Company_Cell_Phone"
+                      <input type="text" class="form-control" id="Company_Cell_Phone" name="Company_Cell_Phone"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         placeholder="Phone number" required>
                     </div>
@@ -1180,7 +1178,7 @@
 
                 <button class="btn mt-4 btn-primary" type="submit" style="background-color:#23a1d3;">PREVIOUS
                   PAGE</button>
-                <button class="btn mt-4 btn-primary continue"  style="background-color:#23a1d3;"
+                <button class="btn mt-4 btn-primary continue" type="submit" style="background-color:#23a1d3;"
                   id="SalesButton2" onkeyup="enableSubmit()">CONTINUE</button>
               </div>
 
@@ -1196,7 +1194,7 @@
             style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">BANKING INFORMATION</h5>
         </div>
         <div class="container cnt col-8 p-4 brd">
-          <div class="g-3 justify-content-center" >
+          <form class="g-3 justify-content-center" method="POST" action="#">
             <div class="container">
               <div class="row">
                 <div class="col-md-6 demoSize">
@@ -1287,9 +1285,9 @@
                 <div class="col-md-12">
                   <div class="row g-3 align-items-center">
                     <div class="col-md-12" style="padding: 20px 0; ">
-                      <input type="checkbox" class="form-check-input" style="position: relative;" id="isAddressSame"
-                        name="isAddressSame" required>
-                      <label for="isAddressSame" class="col-form-label"
+                      <input type="checkbox" class="form-check-input" style="position: relative;" id="Agent_Bank_Name"
+                        name="Agent_Bank_Name" required>
+                      <label for="Agent_Bank_Name" class="col-form-label"
                         style="font-size: 16px; text-align: right;"><b>My
                           home address is the address that appears on account statement.</b></label>
                       <p style="font-size: 12px;">if not, please provide address on record at the financial institution
@@ -1320,8 +1318,7 @@
                         style="font-size: 16px; text-align: right;"><b>City:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="text" onchange="return (event.charCode > 64 && 
-                  event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" class="form-control"
+                      <input type="text"  class="form-control"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         id="Agent_Statement_City" name="Agent_Statement_City" placeholder="City" required>
                     </div>
@@ -1339,16 +1336,16 @@
                       <select class="form-select" id="Agent_Statement_State"
                         style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;"
                         name="Agent_Statement_State" required>
-                        <option value="NotSalected" selected> Choose</option>
+                        <option value="" selected> Choose</option>
 
-                        <option value="Arizona">Arizona</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Louisiana">Nevada</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="NV">Nevada</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
 
                       </select>
                     </div>
@@ -1362,7 +1359,7 @@
                           Code:</b></label>
                     </div>
                     <div class="col-md-6" style="padding-left: 4px;">
-                      <input type="number" class="form-control" id="Agent_Statement_Zip" name="Agent_Statement_Zip"
+                      <input type="text" class="form-control" id="Agent_Statement_Zip" name="Agent_Statement_Zip"
                         style="padding-bottom: 0;font-size: 16px; color: black; padding-left: 5px;"
                         placeholder="Zip Code" required>
                     </div>
@@ -1399,9 +1396,9 @@
 
               <div class="text-center mt-3">
 
-                <button class="btn mt-4 btn-primary"  style="background-color:#23a1d3;">PREVIOUS
+                <button class="btn mt-4 btn-primary" type="submit" style="background-color:#23a1d3;">PREVIOUS
                   PAGE</button>
-                <button class="btn mt-4 btn-primary continue"  style="background-color:#23a1d3;"
+                <button class="btn mt-4 btn-primary continue" type="submit" style="background-color:#23a1d3;"
                   id="SalesButton3">CONTINUE</button>
               </div>
 
@@ -1412,20 +1409,20 @@
     </div>
     </section>
 
-    <section id="LastForm" class="pt-5 pb-5" >
+    <section id="LastForm" class="pt-5 pb-5" style="display: none;">
       <div class="container col-8 p-1" style="background-color:#003399">
         <h5 class="text-white text-left" style="font-size: 16px; font-weight: 600; padding: 0; margin: 15px 0 2px 5px;">
           DO YOU WANT TO SPEED UP YOUR APPLICATION? UPLOAD THE
           FOLLOWING:</h5>
       </div>
       <div class="container cnt col-8 p-4 brd">
-        <div class="g-3 justify-content-center">
+        <form class="g-3 justify-content-center" method="POST" action="./thankyou.html">
 
           <div class="container ddd">
             <div class="row">
               <div class="col-md-6">
                 <div class="row">
-                  <label for="purchase_greement" class="form-label"><b>1. Purchase Agreement (RPA)</b></label>
+                  <label for="formFile" class="form-label"><b>1. Purchase Agreement (RPA)</b></label>
                 </div>
                 <div class="row col-md-8">
                   <input type="file" class="form-control" id="purchase_greement" name="purchase_greement" required>
@@ -1433,50 +1430,50 @@
               </div>
               <div class="col-md-6">
                 <div class="row">
-                  <label for="MLS_Production" class="form-label"><b>2. Last 24 Months MLS Production History
+                  <label for="formFile" class="form-label"><b>2. Last 24 Months MLS Production History
                     </b></label>
                 </div>
                 <div class="row col-md-8">
-                  <input type="file" class="form-control" id="MLS_Production" name="MLS_Production">
+                  <input type="file" class="form-control" id="purchase_greement" name="purchase_greement">
                 </div>
               </div>
             </div>
             <div class="row pt-5">
               <div class="col-md-6">
                 <div class="row">
-                  <label for="BankStatement" class="form-label"><b>3. Last Month's Bank Statement or Void Check</b></label>
+                  <label for="formFile" class="form-label"><b>3. Last Month's Bank Statement or Void Check</b></label>
                 </div>
                 <div class="row col-md-8">
-                  <input type="file" style="color: black; font-size: 16px;" class="form-control" id="BankStatement"
-                    name="BankStatement" required>
+                  <input type="file" style="color: black; font-size: 16px;" class="form-control" id="purchase_greement"
+                    name="purchase_greement" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="row">
-                  <label for="Drivers_License" class="form-label"><b>4. Color Copy of Drivers License</b></label>
+                  <label for="formFile" class="form-label"><b>4. Color Copy of Drivers License</b></label>
                 </div>
                 <div class="row col-md-8">
-                  <input type="file" class="form-control" id="Drivers_License" name="Drivers_License" required>
+                  <input type="file" class="form-control" id="purchase_greement" name="purchase_greement" required>
                 </div>
               </div>
             </div>
             <div class="row pt-5">
               <div class="col-md-6">
                 <div class="row">
-                  <label for="Escrow_Contact" class="form-label"><b>5. Broker of Record and Escrow Contact
+                  <label for="formFile" class="form-label"><b>5. Broker of Record and Escrow Contact
                       Information</b></label>
                 </div>
                 <div class="row col-md-8">
-                  <input type="file" class="form-control" id="Escrow_Contact" name="Escrow_Contact" required>
+                  <input type="file" class="form-control" id="purchase_greement" name="purchase_greement" required>
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="row">
-                  <label for="Anything_Else" class="form-label"><b>6. Anything Else You Might Think Would Be
+                  <label for="formFile" class="form-label"><b>6. Anything Else You Might Think Would Be
                       Helpful</b></label>
                 </div>
                 <div class="row col-md-8">
-                  <input type="file" class="form-control" id="Anything_Else" name="Anything_Else">
+                  <input type="file" class="form-control" id="purchase_greement" name="purchase_greement">
                 </div>
               </div>
             </div>
@@ -1484,7 +1481,7 @@
               <div class="col-md-12">
                 <div class="row">
                   <div class="col-md-4 colSix">
-                    <label for="BrokerRecordOfCompany6" class="col-form-label"
+                    <label for="Agent_First_Name" class="col-form-label"
                       style="font-size: 16px; text-align: right; padding-bottom: 0;"><b>I
                         agree to the Privacy Policy:</b></label>
                   </div>
@@ -1492,9 +1489,9 @@
                     <select id="BrokerRecordOfCompany6"
                       style="font-size: 16px; padding-bottom: 0; color: black; padding-left: 5px;" class=""
                       name="OpenAdvanceswihOther">
-                      <option value="Yes" selected></option>
-                      <option value="Yes">Yes</option>
-                      <option value="No">No</option>
+                      <option value="" selected></option>
+                      <option>Yes</option>
+                      <option>No</option>
                     </select>
                     <p class="text-center"><a target="_blank" href="./privacypolicy.html">Read Privacy Policy</a></p>
                   </div>
@@ -1508,7 +1505,7 @@
 
           <div class="container">
             <div class="text-center mt-3">
-              <button class="btn mt-4 btn-primary text-center" id="completeFormSubmit"
+              <button class="btn mt-4 btn-primary text-center" type="submit"
                 style="background-color:rgb(76, 236, 76);"><b>Complete Application
                 </b></button>
 
@@ -1866,7 +1863,15 @@
       let a = $("#Agent_Cell_Phone").val();
       if (a.length == 3 || a.length == 7) {
         c = a + "-";
-        $("#Agent_Cell_Phone").val(c);
+        $("#Agent_Cell_Phone").val(c);    
+
+                   
+
+
+
+
+
+
       }
       if (a.length == 12) {
         c = a.slice(0, -1);
@@ -1902,8 +1907,8 @@
       }
     });
 
-// client form submit
-$("#ContactButton20").click(function(){
+
+$("#contactForm").mouseover(function(){
  
 
   console.log('you clicked on the button')
@@ -1919,7 +1924,6 @@ $("#ContactButton20").click(function(){
    let city = $('#Agent_City').val();
    let state = $('#Agent_State').val();
    let zipcode = $('#Agent_Zip').val();
-
    
 
       console.log('all the details are ',firstName,lastName,email,phone,address,city,state,zipcode)
@@ -1933,54 +1937,6 @@ $("#ContactButton20").click(function(){
                     data: { "amount":amount },
                     success: function (result) {
                         localStorage.setItem("appId",result.data.appId);
-
-
-    $.ajax({
-    url: "http://localhost:3000/api/client/register",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                    // data: { "firstName":firstName,"lastName":lastName,email:"email", phone,},
-                    data: {appId:result.data.appId, firstName,lastName,email,phone,HomeAddress:address,city,state,zipcode},
-                    success: function (result) {
-                        // localStorage.setItem("appId",result.data.appId);
-
-
-
-
-document.getElementById('SeleInformation').style.display = 'block'
-
-  
-
-
-
-
-
- $.ajax({
-    url: "http://localhost:3000/api/application/edit",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                    // data: { "firstName":firstName,"lastName":lastName,email:"email", phone,},
-                    data: {id:localStorage.getItem('appId'),isClientCompleted:true},
-                    success: function (result) {
-   }
-                });   
-
-
-
-
-                                          
-
-                    }
-                });   
-
-
-
-
-
-
-
 }
                 })
 
@@ -1988,425 +1944,24 @@ document.getElementById('SeleInformation').style.display = 'block'
 
                 
 
-                     
+                         $.ajax({
+    url: "http://localhost:3000/api/client/register",
+    headers: { "authToken": authToken },
+                    type: "POST",
+                    dataType: "json",
+                    data: { "amount":amount },
+                    success: function (result) {
+                        localStorage.setItem("appId",result.data.appId);
+
+                                          
+
+                    }
+                });   
+
              
 })
 
 
-// Sales  Form submit 
-$("#SalesButton").click(()=>{
-
-
-  let authToken = localStorage.getItem('authToken')
- 
-
-    let isBroker = $('#BrokerRecordOfCompany').val();
-    let isTakenAdvance = $('#BrokerRecordOfCompany3').val();
-
-
-
-    
- $.ajax({
-    url: "http://localhost:3000/api/saleconform/register",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                  
-                    data: {appId:localStorage.getItem('appId'),isBroker,isTakenAdvance},
-                    success: function (result) {
-
-
-   }
-                });  
-                
-                //property detailas api call 
-
-    let PropertyAddress = $('#Property_Addres').val();
-    let Propertycity = $('#Property_City').val();
-    let Propertystate = $('#Property_State').val();
-    let Propertyzip = $('#Property_Zip').val();
-    let PropertysalerName = $('#Property_Seller_Name').val();
-    let PropertybuyerName = $('#Property_Buyer_Name').val();
-    let PropertyfinalSalesPrice = $('#Property_Final_Price').val();
-    let PropertyclosingDate = $('#Property_Closing_Date').val();
-    let isShortSale = $('#isShortSale').val();
-
-
-
- 
-
- $.ajax({
-    url: "http://localhost:3000/api/property/register",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                  
-                    data: {appId:localStorage.getItem('appId'),address:PropertyAddress,state:Propertystate,sellerName:PropertysalerName,finalSalesPrice:PropertyfinalSalesPrice,city:Propertycity,zipCode:Propertyzip,buyerName:PropertybuyerName,ClosingDate:PropertyclosingDate,isShortSale},
-                    success: function (result) {
-
-
-   }
-                });   
-
-    
-
-                // Agent detials   
-                
-                
-
-
-
-
-  let netCommission = $('#Property_Final_Price_Net').val();
-  
-  let typeOfAgentOutput=()=>{
-    let isSellingOrListing = $('#isSellingOrListing').val();
-    
-    
-    if(isSellingOrListing=="islisting"){
-      return {
-        
-        isListing:true,
-        isSelling:false
-        
-      }
-    }
-    
-    
-    if(isSellingOrListing=="isSelling")
-    return {
-      
-      isListing:false,
-      isSelling:true
-      
-    }
-  }
-  
-  let typeOfAgent=typeOfAgentOutput()
-  let totalTransactions = $('#Transaction_completein_12months').val();
-  let pendingTransactions = $('#Pedning_Transaction').val();
-  let nonPendingListing = $('#Non_pending_Transaction').val();
-
-
-  console.log('all the details are ',netCommission,typeOfAgent,totalTransactions,pendingTransactions,nonPendingListing)
-
- 
-
- $.ajax({
-    url: "http://localhost:3000/api/agent/register",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                  
-                    data: {appId:localStorage.getItem('appId'),netCommission,typeOfAgent,totalTransactions,pendingTransactions,nonPendingListing},
-                    success: function (result) {
-
-
-   }
-                });   
-
-
-
-
-
-                // Closing company detials   
-                
-                
-
-
-
-
-  let closingCompanyName = $('#Closing_Company').val();
-  let address = $("#ClosingCompany_address").val();
-  let EscrowNumber = $('#Escrow').val();
-  let city = $("#ClosingCompany_city" ).val();
-  let state = $('#ClosingCompany_State').val();
-  let zipCode = $('#ClosingCompany_Zip').val();
-  let contactName = $('#ClosingCompany_Contact').val();
-  let phone = $('#ClosingCompany_Cell_Phone').val();
-  let email = $('#ClosingCompany_Email').val();
-
-
-
- 
-
- $.ajax({
-    url: "http://localhost:3000/api/closingcompany/register",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                  
-                    data: {appId:localStorage.getItem('appId'),closingCompanyName,address,EscrowNumber,city,state,zipCode,contactName,phone,email},
-                    success: function (result) {
-
-
-
-
-
-$.ajax({
-    url: "http://localhost:3000/api/application/edit",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                   
-                    data: {id:localStorage.getItem('appId'),isSaleCompleted:true,},
-                    success: function (result) {
-
-                      document.getElementById('BrokerInformation').style.display="block"
-                  
-   }
-                });   
-
-
-
-
-
-
-
-
-   }
-                });   
-
-
-
-  
-  
-})
-
-//Broker Form Submit
-$("#SalesButton2").click(()=>{
-
-
-  let authToken = localStorage.getItem('authToken')
- 
-
-    let borkerCompanyName = $('#Broker_CompanyName').val();
-    let address = $('#Broker_address').val();
-    let city = $('#Broker_City').val();
-    let state = $('#Broker_State').val();
-    let zipcode = $('#Broker_Zip').val();
-    let phone = $('#Company_Cell_Phone').val();
-    let email = $('#Broker_Company_Email').val();
-
-    let bemail = $('#Broker_Email').val();
-    let bcellPhone = $('#Broker_Cell_Phone').val();
-    let bFirstName = $('#BrokerFirst_Name').val();
-    let bLastName = $('#Broker_Last_Name').val();
- 
-
-
-
-$.ajax({
-    url: "http://localhost:3000/api/broker/register",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                  
-                    data: {appId:localStorage.getItem('appId'),borkerCompanyName,address,city,state,zipcode,phone,email,bemail,bcellPhone,bFirstName,bLastName},
-                    success: function (result) {
-
-
-
-
-
-$.ajax({
-    url: "http://localhost:3000/api/application/edit",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                   
-                    data: {id:localStorage.getItem('appId'),isBrokerCompleted:true,},
-                    success: function (result) {
-   }
-                });   
-
-
-
-
-
-
-
-
-   }
-                });   
-
-
-
-  
-  
-})
-
-
-
-//Banking  Form Submit
-$("#SalesButton3").click(()=>{
-
-
-  let authToken = localStorage.getItem('authToken')
- 
-
-    let bankName = $('#Agent_Bank_Name').val();
-    let accountHolder = $('#Account_Holder_Name').val();
-    let accountType = $('#Agent_Account_type').val();
-    let routing = $('#Routing').val();
-    let accountNumber = $('#Account_number').val();
-
-
-    let statementAddress = $('#Agent_Statement_Address').val();
-    let city = $('#Agent_Statement_City').val();
-    let state = $('#Agent_Statement_State').val();
-    let zipCode = $('#Agent_Statement_Zip').val();
-  let isAddressSame = document.getElementById('isAddressSame').checked;
-
-  
-
-
-
-$.ajax({
-    url: "http://localhost:3000/api/banking/register",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                  
-                    data: {appId:localStorage.getItem('appId'),bankName,accountHolder,accountType,routing,accountNumber,statementAddress,city,state,zipCode,isAddressSame},
-                    success: function (result) {
-
-
-
-
-
-$.ajax({
-    url: "http://localhost:3000/api/application/edit",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                   
-                    data: {id:localStorage.getItem('appId'),isBankingCompleted:true,},
-                    success: function (result) {
-
-
-                      document.querySelector('#LastForm').style.display="block"
-
-}
-                });   
-
-
-
-
-
-
-
-
-   }
-                });   
-
-
-
-  
-  
-})
-
-//Upload Document  Form Submit
-$("#completeFormSubmit").click(()=>{
-
-
-  let authToken = localStorage.getItem('authToken')
- 
-
-    let isAgreeTerms = $('#BrokerRecordOfCompany6').val()
-    let purchase_greement = $('#purchase_greement').prop('files')[0]
-    let MLS_Production = $('#MLS_Production').prop('files')[0]
-    let BankStatement = $('#BankStatement').prop('files')[0]
-    let Drivers_License = $('#Drivers_License').prop('files')[0]
-    let Escrow_Contact = $('#Escrow_Contact').prop('files')[0]
-    let Anything_Else = $('#Anything_Else').prop('files')[0]
-
-    console.log({purchase_greement,MLS_Production} )
-
-  
-
-
-
-
-
-
-
- let formdata = new FormData();
-
- formdata.append("appId",localStorage.getItem("appId"))
- formdata.append("files",purchase_greement)
- formdata.append("files",MLS_Production)
- formdata.append("files",BankStatement)
- formdata.append("files",Drivers_License)
- formdata.append("files",Escrow_Contact)
- formdata.append("files",Anything_Else)
-
-
-
-//  formdata.append()
-
-
-
-  //   let accountHolder = $('#Account_Holder_Name').val();
-  //   let accountType = $('#Agent_Account_type').val();
-  //   let routing = $('#Routing').val();
-  //   let accountNumber = $('#Account_number').val();
-
-
-  //   let statementAddress = $('#Agent_Statement_Address').val();
-  //   let city = $('#Agent_Statement_City').val();
-  //   let state = $('#Agent_Statement_State').val();
-  //   let zipCode = $('#Agent_Statement_Zip').val();
-  // let isAddressSame = document.getElementById('isAddressSame').checked;
-
-  
-
-
-
-$.ajax({
-    url: "http://localhost:3000/api/documentupload/register",
-processData: false,
-  mimeType: "multipart/form-data",
-  contentType: false,
-headers: { "authToken": authToken },
-type: "POST",
-data: formdata,
-success: function (result) {
-
-
-
-
-
-$.ajax({
-    url: "http://localhost:3000/api/application/edit",
-    headers: { "authToken": authToken },
-                    type: "POST",
-                    dataType: "json",
-                   
-                    data: {id:localStorage.getItem('appId'),isBankingCompleted:true,},
-                    success: function (result) {
-
-
-                      document.querySelector('#LastForm').style.display="block"
-
-}
-                });   
-
-
-
-
-
-
-
-
-   }
-                });   
-
-
-
-  
-  
-})
 
 
   });
@@ -2489,40 +2044,29 @@ $.ajax({
 
 
   // for third form opening
+  let btn_second = document.getElementById('SalesButton');
+  let visible_section2 = document.getElementById('BrokerInformation');
 
-
-
-  // let btn_second = document.getElementById('SalesButton');
-  // let visible_section2 = document.getElementById('BrokerInformation');
-
-
-
-
-
-
-  // btn_second.addEventListener('click', function (e) {
-  //   visible_section2.style.display = 'block'
-  //   e.preventDefault()
-  // })
-
-
+  btn_second.addEventListener('click', function (e) {
+    visible_section2.style.display = 'block'
+    e.preventDefault()
+  })
   //for fourth form opening
-  // let btn_third = document.getElementById('SalesButton2');
-  // let visible_section3 = document.getElementById('BankingInformation');
+  let btn_third = document.getElementById('SalesButton2');
+  let visible_section3 = document.getElementById('BankingInformation');
 
-  // btn_third.addEventListener('click', function (e) {
-  //   visible_section3.style.display = 'block'
-  //   e.preventDefault()
-  // })
+  btn_third.addEventListener('click', function (e) {
+    visible_section3.style.display = 'block'
+    e.preventDefault()
+  })
   //for last form opening
+  let btn_last = document.getElementById('SalesButton3');
+  let visible_section4 = document.getElementById('LastForm');
 
-  // let btn_last = document.getElementById('SalesButton3');
-  // let visible_section4 = document.getElementById('LastForm');
-
-  // btn_last.addEventListener('click', function (e) {
-  //   visible_section4.style.display = 'block'
-  //   e.preventDefault()
-  // })
+  btn_last.addEventListener('click', function (e) {
+    visible_section4.style.display = 'block'
+    e.preventDefault()
+  })
 
 
 
@@ -2547,11 +2091,7 @@ $.ajax({
   }
 
   $(document).ready(function () {
-$("#logout-btn").click(()=>{
-  localStorage.removeItem('authToken')
-})
 
-    
     let authtoken = localStorage.getItem("authToken");
     if (authtoken != null) {
       $("#login-btn").hide();
