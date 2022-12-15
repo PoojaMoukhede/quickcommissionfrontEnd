@@ -140,13 +140,7 @@
                                     </div>
                                 </div>
                                 <div id="site-logo" class="clearfix">
-                                    <!-- <div id="site-logo-inner">home/img/imagebox/logo.jpg.
-                                            <a href="{% url 'home:index' %}" title="Finance" rel="home"
-                                                class="main-logo"><img src="home/img/imagebox/log"
-                                                    style="position:fixed; left:275px; top: 42px;" width="1300" height="500"
-                                                    alt="Finance" data-retina="home/img/logo@2x.png"
-                                                    data-width="184" data-height="40"></a>
-                                        </div> -->
+                                    
                                 </div>
                                 <!-- /#site-logo -->
 
@@ -219,18 +213,12 @@
             <!-- main content -->
             <!-- Sidebar -->
             <h1 class="edit">Edit Profile</h1>
-            <div class="user_container">
-           
-            <div class="Sidebar" style="width:14%;  margin-top: 2%; background-color: #003399;">
-                <div class="user" style="height: 40%;">
-                    <img src="./home/icon/images.jpg" alt=""
-                        style="border-radius: 50%; width: 50%; margin-top: 10%; margin-left: 22%;" />
-                    <h3 style="color: white; margin-top: 10%; margin-left: 30%;">User Name</h3>
-                </div>
-
-                <div class="icon_text">
-                    <i class="fa-sharp fa-solid fa-house" style="color: white; margin-left: 10px;"></i>
-                    <a href="./index.html" class="items">DashBord</a>
+             
+        <div class="main-container">
+            <section style=" width: 14%; height: 80vh;" class="side_bar">
+                <div class="user_img">
+                  <img src="./home/icon/images.jpg" alt="" style="border-radius: 50%; width: 50%; margin-top: 40px; margin-left: 60px;"/>
+                  <h3>User Name</h3>
                 </div>
                 <div class="icon_text">
                     <i class="fa-sharp fa-solid fa-house" style="color: white; margin-left: 10px;"></i>
@@ -240,67 +228,76 @@
                     <i class="fa-sharp fa-solid fa-house" style="color: white; margin-left: 10px;"></i>
                     <a href="./index.html" class="items">DashBord</a>
                 </div>
-            </div>
+                <div class="icon_text">
+                    <i class="fa-sharp fa-solid fa-house" style="color: white; margin-left: 10px;"></i>
+                    <a href="./index.html" class="items">DashBord</a>
+                </div>
+            </section>
+            <section id="user_page"> 
+                <img src="./home/icon/images.jpg" alt="" style="border-radius: 50%; width: 20%; margin-top: 40px; margin-left: 40%;"/>
+               <h2>Select image<input type="file" style="color: white; opacity: 0; margin-top: -20px;"/></h2>
+               
+                <form style="display: flex; flex-direction: column; margin-left: 30%;margin-bottom: 5%;">
+                    <label class="form_lable">Name</label>
+                    <input class="input" type="text" placeholder="Your Name" style="width: 60%;"/>
 
-            <!-- Page Content -->
-            <div style="margin-left:30%; display: flex; flex-direction:column;">
-              <div class="userImg" style="display: flex; flex-direction: column;">
-                <img src="./home/icon/images.jpg" alt=""
-                style="border-radius: 50%; width: 100%; height: 100%;" />
-                <h3 style=" color: gray; margin-left: 60px;">Select Image</h3>
-              </div>
+                    <label class="form_lable">Email</label>
+                    <input class="input" type="email" placeholder=" Your Email" style="width: 60%;"/>
 
-              <div class="form">
-                <lable class="lable">First Name</lable>
-                <input type="text" placeholder="Enter Your Name" class="field" />
-                <lable class="lable">Email ID</lable>
-                <input type="text" placeholder="Enter Email" class="field"/>
-                <lable class="lable">Mobile Number</lable>
-                <input type="text" placeholder="Enter Mobile Number" class="field"/>
-              </div>
+                    <label class="form_lable">Mobile Number</label>
+                    <input class="input" type="text" placeholder="Your Mobile Number" style="width: 60%;"/>
+                </form>
+            </section>
+
+        </div>
 
 
-            </div>
-            </div>
+
             <style>
-                .user_container{
-                    display: flex;
-                    flex-direction: row;
-                }
-                .edit {
-                    margin-top: 6%;
-                    margin-left: 3%;
+                 .edit{
+                    padding: 50px;
                     font-size: 30px;
-                    color: rgb(77, 75, 75);
+                    color:rgb(117, 113, 113)
+                 }
+                .main-container{
+                    display: flex;
                 }
-
-                .icon_text {
-                    margin: 15px;
+                .side_bar{
+                    background-color: #003399;
+                   
+                    /* margin-top: 10vh; */
                 }
-
-                .items {
-                    font-size: 16px;
-                    margin: 20px;
+                .icon_text{
+                 margin: 30px;
+                }
+                .items{
                     color: white;
+                    font-size: 15px;
+                    margin-left: 10px;
                 }
+                h3{
+                    color: white;
+                    margin-top: 15px;
+                    margin-left: 75px;
+                }
+                #user_page{
+                    width: 86%;
+                }
+                h2{
+                    color:rgb(117, 113, 113);
+                    margin-left: 46%;
 
-                .Sidebar {
-                    display: flex;
-                    flex-direction: column;
                 }
-                .form{
-                    display: flex;
-                    flex-direction: column;
-                    margin-top: 40%;
-                    margin-bottom: 20%;
+                .form_lable{
+                    color:rgb(117, 113, 113);
+                    font-size: 15px;
+                    font-weight: 500px;
+                   
                 }
-                .lable{
-                    font-size: 16px;
-                    color: gray;
+                .input{
+                    width: 300px;
                 }
-                /* .field{
-                    width: 1000px;
-                } */
+               
             </style>
             <!-- Footer -->
             <footer style="background-color:#003399;">
@@ -485,7 +482,7 @@
     <!-- Revolution Slider -->
     <script src="home/rev-slider/js/jquery.themepunch.tools.min.js"></script>
     <script src="home/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="home/js/rev-slider.js' %}"></script>
+    <script src="home/js/rev-slider.js"></script>
     <!-- Load Extensions only on Local File Systems ! The following part can be removed on Server for On Demand Loading -->
     <script src="home/rev-slider/js/extensions/revolution.extension.actions.min.js"></script>
     <script src="home/rev-slider/js/extensions/revolution.extension.carousel.min.js"></script>

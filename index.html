@@ -19,9 +19,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
     integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">     -->
+   
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<!-- script for sweet alert  -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
@@ -235,15 +240,15 @@
                                                 height="50"></a>
                                     </div>
                                 </div>
-                               <div id="site-logo" class="clearfix">
-                                    <!-- <div id="site-logo-inner">home/img/imagebox/logo.jpg.
+                               <!-- <div id="site-logo" class="clearfix">
+                                    <div id="site-logo-inner">home/img/imagebox/logo.jpg.
                                         <a href="{% url 'home:index' %}" title="Finance" rel="home"
                                             class="main-logo"><img src="home/img/imagebox/log"
                                                 style="position:fixed; left:275px; top: 42px;" width="1300" height="500"
                                                 alt="Finance" data-retina="home/img/logo@2x.png"
                                                 data-width="184" data-height="40"></a>
-                                    </div> -->
-                                </div>
+                                    </div>
+                                </div> -->
                                 <!-- /#site-logo --> 
 
                                 <div class="mobile-button"><span></span></div><!-- //mobile menu button -->
@@ -514,9 +519,7 @@
                                                     </div><!-- /.col-md-4 -->
 
 
-                                                    <!--                                                    <div class="col-md-12">-->
-                                                    <!--                                                        <div class="themesflat-spacer clearfix" data-desktop="90" data-mobi="60" data-smobi="60"></div>-->
-                                                    <!--                                                    </div>&lt;!&ndash; /.col-md-12 &ndash;&gt;-->
+                                                                                             
                                                 </div><!-- /.row -->
                                             </div><!-- /.container -->
                                         </div>
@@ -531,19 +534,7 @@
 
 
                                 <div class="col-md-4">
-                                    <!--                                    <div class="themesflat-image-box style-1 clearfix">-->
-                                    <!--                                        <div class="item">-->
-                                    <!--                                            <div class="inner">-->
-                                    <!--                                                &lt;!&ndash; <div class="text-wrap">-->
-                                    <!--                                                    <div class="thumb"><img src="home/img/imagebox/imagebox1.jpg' %}" alt="Image"></div>-->
-
-                                    <!--                                                        <h3 class="title"><a target="_blank" href="">APPLY ONLINE</a></h3>-->
-
-                                    <!--                                                        <div class="desc"> </div>-->
-                                    <!--                                                    </div>&ndash;&gt;-->
-                                    <!--                                            </div>-->
-                                    <!--                                        </div>-->
-                                    <!--                                    </div>&lt;!&ndash; /.themesflat-image-box &ndash;&gt;-->
+                                    
 
                                     <div class="themesflat-spacer clearfix" data-desktop="0" data-mobi="40"
                                         data-smobi="40"></div>
@@ -552,16 +543,7 @@
                                 <div class="col-md-4">
                                     <div class="themesflat-image-box style-1 clearfix">
                                         <div class="item">
-                                            <!-- <div class="text-wrap">
-                                                    <div class="inner">
-                                                        <div class="thumb"><img src="home/img/imagebox/imagebox2.jpg' %}" alt="Image"></div>
-
-                                                        <div class="text-wrap">
-                                                            <h3 class="title"><a target="_blank" href="">PROJECT FINANCE</a></h3>
-
-                                                            <div class="desc">Create a sustainable financing structure</div>
-                                                        </div>
-                                                    </div>-->
+                                            
                                         </div>
                                     </div><!-- /.themesflat-image-box -->
 
@@ -573,22 +555,13 @@
                                     <div class="themesflat-image-box style-1 clearfix">
                                         <div class="item">
                                             <div class="inner">
-                                                <!-- <div class="text-wrap">
-                                                        <div class="thumb"><img src="home/img/imagebox/imagebox3.jpg' %}" alt="Image"></div>
-
-                                                        <div class="text-wrap">
-                                                            <h3 class="title"><a target="_blank" href="">REAL ESTATE PLANNING</a></h3>
-
-                                                            <div class="desc">How to finance your real estate investment</div>
-                                                        </div>
-                                                    </div>-->
+                                               
                                             </div>
                                         </div><!-- /.themesflat-image-box -->
                                     </div><!-- /.col-md-4 -->
 
                                     <div class="col-md-12">
-                                        <!--                                        <div class="themesflat-spacer clearfix" data-desktop="90" data-mobi="60"-->
-                                        <!--                                            data-smobi="60"></div>-->
+                                       
                                     </div><!-- /.col-md-12 -->
                                 </div><!-- /.row -->
                             </div><!-- /.container -->
@@ -934,7 +907,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="button-wrap" id="swal">
-                                                    <a href="./applynow.html" 
+                                                    <a href="#" 
                                                         class="themesflat-button white font-weight-600 margin-top-10 margin-bottom-13"
                                                         style="background-color: #00ccff;color:black; box-shadow: 5px 5px 5px darkgray;
                                                         ">APPLY TODAY
@@ -956,53 +929,6 @@
                         <br>
 
                         <br>
-                        <!-- <section>
-                            <form class="row g-3 justify-content-center" method="POST"
-                                action="{% url 'home:applynow' %}">
-                                {% csrf_token %}
-
-                                <div class="container col-8 p-1" style="background-color:#003399;">
-                                    <h5 class="text-white text-left" style="padding-top: 5px;">Confirm Amount Requested
-                                    </h5>
-                                </div>
-                                <div class="container cnt col-8 p-4 brd">
-
-
-                                    <div class="form-group row col-12 pt-1">
-                                        <label for="ValidationAmount" class="text-right col-sm-5 col-form-label">Amount
-                                            Requested: </label>
-                                        <div class="col-sm-4 currency-wrap">
-                                            <input type="text" onkeypress="CheckNumeric(event);" class="form-control"
-                                                name="amount" id="amount" style="text-align:right;" min=4000 max=15000
-                                                required>
-                                            <p id="errorMsg">Value must be in between $4000 to $15000 </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="container col-8 p-1 text-white" style="background-color:#003399">
-                                    <h6 class="text-white text-left">Contact Information</h6>
-                                </div>
-
-                                <div class="container brd col-8 p-3 justify-content-center brd">
-                                    <div class="form-row  mb-3">
-                                        <div class="col-12 row justify-content-center">
-                                            <label class="col-2 col-form-label" for="validationServer01">Email:</label>
-                                            <input type="email" class="form-control row col-4" id="email" name="email"
-                                                placeholder="E-mail" required>
-                                        </div>
-                                    </div>
-
-                                    <div class="text-center mt-3">
-
-                                        <button class="btn mt-4 btn-primary" type="submit" id="HomeFormButton"
-                                            style="background-color:#00ccff;">Continue</button>
-                                    </div>
-
-                                </div>
-                            </form>
-
-                        </section> -->
                         <br>
                         <form class="g-3 justify-content-center" method="POST" id="AmountForm" style="height:363px; margin-top: 40px; margin-bottom: 0px;">
 
@@ -1198,30 +1124,9 @@ event.preventDefault();
    window.location.href="./accounts/login.html"
 }
 })
-// if user click on apply today btn then render a popup
 
-// document.getElementById('swal').addEventListener('click',function(){
-// 	swal({
-// 		title: "Welcome",
-// 		text: "You will not be able to recover this imaginary file!",
-// 		showCancelButton: true,
-// 		confirmButtonColor: '#DD6B55',
-// 		confirmButtonText: 'New User',
-// 		cancelButtonText: "Existing User",
-// 		closeOnConfirm: false,
-// 		closeOnCancel: false
-// 	},
-// 	function(isConfirm){
-//     if (isConfirm){
-//       swal("Deleted!", "Your imaginary file has been deleted!", "success");
-//     } else {
-//       swal("Cancelled", "Your imaginary file is safe :)", "error");
-//     }
-// 	});
-// // swal({
-// //   buttons: ["Stop", "Do it!"],
-// // });
-// });
+
+
 
 let logout = document.querySelector("#logout-btn");
 
@@ -1353,22 +1258,32 @@ logout.addEventListener("click",()=>{
     }));
 </script>
 
-<!-- <script>
-   let handle_login = document.getElementById('login-btn');
-   let handle_logout = document.getElementById('logout-btn').hide();
-   let user_token = localStorage.getItem("authtoken");
 
-   if(user_token){
-    document.getElementById('login-btn').hide();
-   }
-else{
-    let handle_logout = document.getElementById('logout-btn').show();
-}
-</script> -->
 
  
 </script>
+<!-- if user click on apply today btn then render a popup -->
+<script>
+    document.getElementById("swal").onclick = function(){
 
+swal({
+  title: "Apply Today :)",
+  text: "Once deleted, you will not be able to recover this imaginary file!",
+  icon: "success",
+  buttons:  ["Existing User", "New User"],
+  dangerMode: true,
+})
+.then((willNavigate) => {
+  if (!willNavigate) {
+   location.href='./Application.html'
+  } else {
+    location.href='./applynow.html';
+  }
+});
+
+
+}
+</script>
 
 
 <!-- Javascript -->
